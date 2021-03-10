@@ -1,0 +1,263 @@
+/* :root {
+  --background-primary-color: #f7faff;
+  --background-actions-color: #ffffff;
+
+  --text-primary-color: #3e4043;
+  --text-secondary-color: rgba(0, 0, 0, 0.6);
+  --border-primary-color: #f5f6f7;
+  --card-background-primary-color: #ffffff;
+  --card-background-seconadry-color: #f7faff;
+} */
+/* .light-theme {
+  --background-primary-color: #f7faff;
+  --background-actions-color: #ffffff;
+  --text-primary-color: #3e4043;
+  --text-secondary-color: rgba(0, 0, 0, 0.6);
+  --border-primary-color: #f5f6f7;
+  --card-background-primary-color: #ffffff;
+  --card-background-seconadry-color: #f7faff;
+}
+*/
+
+/* Poppins Regular
+Heebo Regular
+Heebo Medium
+Montserrat Medium
+Montserrat Bold
+Montserrat Regular */
+
+:root {
+  --background-primary-color: #1b1f2b;
+  --background-secondary-color: #272d3e;
+
+  --text-primary-color: #ffffff;
+  --text-secondary-color: rgba(255, 255, 255, 0.6);
+  --text-third-color: rgba(255, 255, 255, 0.38);
+  /* text in left panel in double cell*/
+
+  --border-primary: 1px solid #31394f;
+
+  --card-background-primary-color: #1f2432;
+  --card-background-seconadry-color: #222736;
+  --card-background-third-color: #1f2431;
+}
+
+body {
+  /* temp style, according to template */
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+  height: 100vh;
+}
+
+/* *************************************************** */
+/* Containers styles */
+.wrapper {
+  display: grid;
+  grid-template-columns: 4fr 7fr 68px; /* may be for sidebar set minmax(68px 1fr) */
+  height: 100vh;
+}
+
+.actions {
+  display: grid;
+  grid-template-rows: min-content auto;
+  gap: 1.6rem;
+  background-color: var(--background-secondary-color);
+  padding: 1.6rem;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: min-content min-content min-content auto;
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.sidebar {
+  background-color: var(--background-secondary-color);
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-radius: 18px 0 0 18px;
+}
+
+/* **************************************************** */
+/* Utility grids & flex containers */
+.container-titled {
+  display: grid;
+  grid-template-rows: minmax(10px, auto) 1fr;
+  gap: 0.5rem;
+}
+
+.bottom-panel {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 1.6rem;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cols-2 {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.6rem;
+}
+
+.cols-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.rows-2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.rows-3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+/* **************************************************** */
+/* Card styles */
+.card {
+  background-color: var(--card-background-primary-color);
+  border: var(--border-primary);
+  border-radius: 20px;
+}
+
+.actions .card {
+  background-color: var(--card-background-seconadry-color);
+}
+
+.avatar {
+  height: 54px;
+  width: 54px;
+  border: 1px solid #d3d4d9;
+  border-radius: 12px;
+}
+.avatar-img {
+}
+
+/* **************************************************** */
+/* Common text styles  */
+.title-primary {
+  color: var(--text-primary-color);
+  font-family: 'Heebo';
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.title-primary-faded {
+  color: var(--text-secondary-color);
+  font-family: 'Heebo';
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.title-primary-lg {
+  color: var(--text-primary-color);
+  font-family: 'Heebo';
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 29px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.title-secondary {
+  color: var(--text-secondary-color);
+  font-family: 'Heebo';
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.title-secondary-sm {
+  color: var(--text-third-color);
+  font-family: 'Heebo';
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.title-secondary-xs {
+  color: var(--text-secondary-color);
+  font-family: 'Heebo';
+  font-size: 10px;
+  letter-spacing: 0.33px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.title-calendar {
+  color: var(--text-primary-color);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.63px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title-calendar span {
+  font-weight: 700;
+}
+
+.title-money-lg {
+  color: var(--text-primary-color);
+  font-family: 'Montserrat';
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.81px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.title-money-sm {
+  color: var(--text-primary-color);
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.56px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.trend-up {
+  color: #02b64a;
+}
+
+.trend-down {
+  color: #fb4659;
+}
+
+/* Temp styles */
+.moc {
+  background-color: red;
+}
