@@ -148,6 +148,7 @@ body {
 
 /* **************************************************** */
 /* Common text styles  */
+/* Titles in cards  */
 .title-primary {
   color: var(--text-primary-color);
   font-family: 'Heebo';
@@ -157,6 +158,7 @@ body {
   text-align: right;
 }
 
+/* User greeting */
 .title-primary-faded {
   color: var(--text-secondary-color);
   font-family: 'Heebo';
@@ -169,6 +171,7 @@ body {
   margin: 0;
 }
 
+/* User name*/
 .title-primary-lg {
   color: var(--text-primary-color);
   font-family: 'Heebo';
@@ -181,6 +184,7 @@ body {
   margin: 0;
 }
 
+/* Containers captions, cards subtitles*/
 .title-secondary {
   color: var(--text-secondary-color);
   font-family: 'Heebo';
