@@ -146,7 +146,7 @@
 
           <div class="card container-centered">
             <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
-            <div class="flex-row container-centered">
+            <div class="flex-row container-centered mx-1-6">
               <div class='container-centered-v py-0-6 border-r'>
                 <h3 class='title-secondary'>נוספו החודש</h3>
                 <div class="flex">
@@ -223,41 +223,42 @@
         <!-- Products with chart panel - start -->
         <div class="container-titled">
           <h3 class='title-secondary'>מוצרים</h3>
-
           <div class="products card flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
 
-            <div class="card-container flex-col flex-strech">
+            <div class="card-container flex-col flex-strech mt-0">
 
               <div>
                 <ul>
-                  <li class='title-primary'>כמות פוליסות</li>
-                  <li class='title-primary'>עמלות</li>
-                  <li class='title-primary'>פרמיה</li>
-                  <li class='title-primary'>צבירה</li>
+                  <li class=''>כמות פוליסות</li>
+                  <li class='active'>עמלות</li>
+                  <li class=''>פרמיה</li>
+                  <li class=''>צבירה</li>
                 </ul>
               </div>
 
               <div class="graph-columns"></div>
             </div>
-            <div class="card-container flex-row ">
-              <div class="">
-                <div class="flex-row">
-                  <h4>₪76</h4>
-                  <h4>אלטשולר שחם</h4>
+
+            <div class="card-container flex-row">
+              <div class="flex-strech border-r">
+                <div class="flex-row mb-1">
+                  <h4 class='title-money-xs'>₪76</h4>
+                  <h4 class='title-secondary-sm'>אלטשולר שחם</h4>
                 </div>
                 <div class="flex-row">
-                  <h4>₪8</h4>
-                  <h4>הראל</h4>
+                  <h4 class='title-money-xs'>₪8</h4>
+                  <h4 class='title-secondary-sm'>הראל</h4>
                 </div>
               </div>
-              <div class="">
-                <div class="flex-row">
-                  <h4>₪76</h4>
-                  <h4>אלטשולר שחם</h4>
+              <div class="flex-strech">
+                <div class="flex-row mb-1">
+                  <h4 class='title-money-xs'>₪1,752</h4>
+                  <h4 class='title-secondary-sm'>שלמה סיקסט</h4>
                 </div>
                 <div class="flex-row">
-                  <h4>₪8</h4>
-                  <h4>הראל</h4>
+                  <h4 class='title-money-xs'>₪899</h4>
+                  <h4 class='title-secondary-sm'>כלל</h4>
                 </div>
 
               </div>
@@ -418,45 +419,46 @@
     <!-- Main content - end -->
 
     <!-- Sidebar - start -->
-    <div class="sidebar flex-col">
+    <div class="sidebar-container">
+      <div class="sidebar flex-col">
 
-      <div class='logo container-centered-v'>
-        <div><span>LO</span></div>
-        <div>GO</div>
+        <div class='logo container-centered-v'>
+          <div><span>LO</span></div>
+          <div>GO</div>
+        </div>
+
+        <!-- Nav links -->
+        <nav>
+          <ul class='container-centered-v'>
+            <li>
+              <a href="#" class='active'>
+                <div class="icon">1</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon">2</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon">3</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon">4</div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Service buttons (download, expand) -->
+        <div class="container-centered-v">
+          <div class='icon download mb-1-3'>+</div>
+          <img src="./assets/export/Export.png" alt="epxrt" class="expand-btn mb-1-6" />
+        </div>
       </div>
-
-      <!-- Nav links -->
-      <nav>
-        <ul class='container-centered-v'>
-          <li>
-            <a href="#" class='active'>
-              <div class="icon">1</div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="icon">2</div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="icon">3</div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="icon">4</div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Service buttons (download, expand) -->
-      <div class="container-centered-v">
-        <div class='icon download mb-1-3'>+</div>
-        <img src="./assets/export/Export.png" alt="epxrt" class="expand-btn mb-1-6" />
-      </div>
-
     </div>
     <!-- Sidebar - end -->
 
