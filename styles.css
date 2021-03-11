@@ -35,7 +35,8 @@ Montserrat Regular */
   --text-third-color: rgba(255, 255, 255, 0.38);
   /* text in left panel in double cell*/
 
-  --border-primary: 1px solid #31394f;
+  --border-primary: 1px solid var(--border-primary-color);
+  --border-primary-color: #31394f;
 
   --card-background-primary-color: #1f2432;
   --card-background-seconadry-color: #222736;
@@ -43,7 +44,7 @@ Montserrat Regular */
 }
 
 body {
-  /* temp style, according to template */
+  /* temp style max-width, according to template */
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
@@ -56,8 +57,8 @@ body {
 /* Containers styles */
 .wrapper {
   display: grid;
-  grid-template-columns: 4fr 7fr 68px; /* may be for sidebar set minmax(68px 1fr) */
-  height: 100vh;
+  grid-template-columns: 3.8fr 7.2fr 68px; /* may be for sidebar set minmax(68px 1fr) */
+  height: 100%;
 }
 
 .actions {
@@ -68,6 +69,41 @@ body {
   padding: 1.6rem;
 }
 
+.actions .treatment {
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'left right';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content auto;
+  gap: 0.8rem;
+}
+
+.green-clients {
+  grid-area: top;
+}
+
+.red-clients {
+  grid-area: left;
+}
+
+.exclusive-clients {
+  grid-area: right;
+}
+
+.red-clients .card-container:last-child,
+.exclusive-clients .card-container:last-child {
+  border-top: var(--border-primary);
+  background-color: var(--card-background-third-color);
+  margin: 0;
+  padding-top: 0.8rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.border-r {
+  border-right: var(--border-primary);
+}
+
 .main {
   display: grid;
   grid-template-rows: min-content min-content min-content auto;
@@ -75,11 +111,100 @@ body {
   padding: 1.6rem;
 }
 
+.comission .card-container {
+  margin: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+.products ul {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.products li {
+  margin-left: 1.6rem;
+}
+
+.products li:hover:after {
+  border-top: 3px solid var(--text-primary-color);
+  content: '*';
+}
+
+.products .card-container:last-child {
+  border-top: var(--border-primary);
+  background-color: var(--card-background-third-color);
+  margin: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.products .inner-grid {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  justify-items: stretch;
+}
+
+.ratings {
+  overflow: hidden;
+}
+
+.ratings .percents {
+  color: var(--text-primary-color);
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+
+.ratings .percents span {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.38px;
+}
+
+.ratings li .flex-strech {
+  border-bottom: var(--border-primary);
+}
+
 .sidebar {
   background-color: var(--background-secondary-color);
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   border-radius: 18px 0 0 18px;
+}
+
+.sidebar .logo {
+  height: 110px;
+  background-color: var(--border-primary-color);
+  border-radius: 18px 0 0 0;
+  opacity: 0.4;
+  color: var(--text-primary-color);
+  font-family: 'Poppins';
+  font-size: 22px;
+  letter-spacing: 0.81px;
+  line-height: 23px;
+  text-align: right;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--text-secondary-color);
+}
+
+.sidebar a:active .icon,
+.sidebar a.active .icon {
+  background-color: var(--border-primary-color);
 }
 
 /* **************************************************** */
@@ -95,28 +220,23 @@ body {
   grid-template-columns: 4fr 3fr;
   gap: 1.6rem;
 }
-
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cols-2 {
+.stats {
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: max-content 1fr;
   gap: 1.6rem;
 }
 
 .cols-3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 0.8rem;
+  height: 100%;
 }
 
 .rows-2 {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  gap: 0.8rem;
 }
 
 .rows-3 {
@@ -125,12 +245,52 @@ body {
   gap: 0.8rem;
 }
 
+.flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-strech {
+  flex: 1;
+}
+
+.container-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-centered-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* **************************************************** */
 /* Card styles */
 .card {
   background-color: var(--card-background-primary-color);
   border: var(--border-primary);
   border-radius: 20px;
+  position: relative;
+}
+
+.card-container {
+  margin: 1.6rem;
 }
 
 .actions .card {
@@ -149,13 +309,29 @@ body {
 /* **************************************************** */
 /* Common text styles  */
 /* Titles in cards  */
+/* Active link in Products card */
 .title-primary {
   color: var(--text-primary-color);
   font-family: 'Heebo';
   font-size: 16px;
+  font-weight: normal;
   letter-spacing: 0.5px;
   line-height: 28px;
   text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.title-primary-sm {
+  color: var(--text-primary-color);
+  font-family: 'Heebo';
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 /* User greeting */
@@ -191,7 +367,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 0.25px;
-  line-height: 20px;
+  line-height: 28px;
   text-align: right;
   padding: 0;
   margin: 0;
@@ -199,22 +375,41 @@ body {
   padding-left: 0.8rem;
 }
 
+/* Client policy text in braces, Products card legend, desc in Products bottom table */
 .title-secondary-sm {
+  color: var(--text-secondary-color);
+  font-family: 'Heebo';
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-align: right;
+}
+
+/* treatment actions, description in bottom cards*/
+.title-secondary-sm-faded {
   color: var(--text-third-color);
   font-family: 'Heebo';
+  font-weight: normal;
   font-size: 12px;
   letter-spacing: 0.4px;
   line-height: 16px;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Client policy Card subtitle */
 .title-secondary-xs {
   color: var(--text-secondary-color);
   font-family: 'Heebo';
+  font-weight: normal;
   font-size: 10px;
   letter-spacing: 0.33px;
   line-height: 16px;
   text-align: right;
+  padding: 0;
+  margin: 0;
 }
 
 .title-calendar {
@@ -227,6 +422,8 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
 }
 
 .title-calendar span {
@@ -241,6 +438,13 @@ body {
   letter-spacing: 0.81px;
   line-height: 28px;
   text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.title-money-lg .currency {
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }
 
 .title-money-sm {
@@ -251,6 +455,25 @@ body {
   letter-spacing: 0.56px;
   line-height: 28px;
   text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Percent sign */
+.title-money-sm span {
+  font-size: 12px;
+  letter-spacing: 0.38px;
+  text-align: right;
+}
+
+/* Money desc in Products bottom table */
+.title-money-xs {
+  color: var(--text-primary-color);
+  font-family: 'Montserrat';
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-align: left;
 }
 
 .trend-up {
@@ -261,7 +484,161 @@ body {
   color: #fb4659;
 }
 
+/* Icons*/
+.icon {
+  height: 52px;
+  width: 52px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon.action {
+  background-color: rgba(2, 182, 74, 0.17);
+  font-size: 26px;
+  font-weight: bold;
+  color: #02b64a;
+}
+
+.icon.download {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  background-color: #02b64a;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 2px;
+}
+
+.dot.trend-up {
+  border-color: #02b64a;
+  background-color: #02b64a;
+}
+
+.dot.trend-down {
+  border-color: #fb4659;
+  background-color: #fb4659;
+}
+
+.company-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  background-color: var(--border-primary-color);
+}
+
+.export-btn {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.expand-btn {
+}
+
+/* Utility margins and paddings */
+.m-0-8 {
+  margin: 0.8rem;
+}
+.mx-1-6 {
+  margin-right: 1.6rem;
+  margin-left: 1.6rem;
+}
+
+.mx-0-8 {
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+}
+
+.mx-0-4 {
+  margin-right: 0.4rem;
+  margin-left: 0.4rem;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.my-0-9 {
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.my-1-3 {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.mb-1-3 {
+  margin-bottom: 1.3rem;
+}
+
+.mb-1-6 {
+  margin-bottom: 1.6rem;
+}
+
+.mr-1-6 {
+  margin-right: 1.6rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.px-0-8 {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.py-0-6 {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.pr-0-8 {
+  padding-right: 0.8rem;
+}
+
+.pl-0-8 {
+  padding-left: 0.8rem;
+}
+
+.pb-0-6 {
+  padding-bottom: 0.6rem;
+}
+
+.px-1-3 {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
 /* Temp styles */
 .moc {
   background-color: red;
+}
+
+.pie-graph {
+  height: 80px;
+  width: 80px;
+  background-color: yellow;
+  border-radius: 40px;
+}
+
+.graph {
+  height: 82px;
+  margin-right: 1.6rem;
+  background-color: yellow;
+  border-left: var(--border-primary);
+  border-bottom: var(--border-primary);
+  border-bottom-left-radius: 20px;
+}
+
+.graph-columns {
+  background-color: yellow;
+  min-height: 136px;
 }

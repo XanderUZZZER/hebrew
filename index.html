@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 
@@ -21,14 +22,93 @@
       <!-- Treatment actions - start-->
       <div class="container-titled">
         <h3 class='title-secondary'>פעולות לטיפול</h3>
-        <div class="card">moc</div>
+
+        <div class="treatment">
+
+          <div class="card green-clients ">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class="card-container flex">
+              <div class='mx-1-6'>
+                <h2 class='title-primary'>לקוחות ירוקים</h2>
+                <h2 class='title-money-lg'>1,386</h2>
+              </div>
+              <div class="icon action">+</div>
+            </div>
+          </div>
+
+          <div class="card red-clients  flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class="card-container flex">
+              <div class=''>
+                <h2 class='title-primary'>לקוחות אדומים</h2>
+                <div class="flex">
+                  <img src="./assets/arrow-down/Down 3.png" alt="trend-down" class='mx-0-8' />
+                  <h2 class='title-money-lg'> 201 </h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class='container-centered-v'>
+                <h3 class='title-primary-sm my-0'>מה השתנה מתחילת החודש?</h3>
+                <div class="flex-row m-0-8">
+                  <div class='cell pr-0-8 pb-0-6 border-r'>
+                    <h3 class='title-money-sm trend-down'>1</h3>
+                    <h3 class='title-secondary-sm-faded'>טופלו החודש</h3>
+                  </div>
+                  <div class='cell pl-0-8 pb-0-6'>
+                    <h3 class='title-money-sm'>202</h3>
+                    <h3 class='title-secondary-sm-faded'>בתחילת חודש</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card exclusive-clients flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+
+            <div class="card-container flex">
+              <div class=''>
+                <h2 class='title-primary'>לקוחות חריגים</h2>
+                <div class="flex">
+                  <img src="./assets/arrow-up/Up 3.png" alt="trend-up" class='mx-0-8' />
+                  <h2 class='title-money-lg'> 43 </h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class='container-centered-v'>
+                <h3 class='title-primary-sm my-0'>מה השתנה מתחילת החודש?</h3>
+                <div class="flex-row m-0-8">
+                  <div class='pr-0-8 pb-0-6 border-r'>
+                    <h3 class='title-money-sm trend-up'>44</h3>
+                    <h3 class='title-secondary-sm-faded'>טופלו החודש</h3>
+                  </div>
+                  <div class='pl-0-8 pb-0-6'>
+                    <h3 class='title-money-sm'>87</h3>
+                    <h3 class='title-secondary-sm-faded'>בתחילת חודש</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
       <!-- Treatment actions - end -->
 
       <!-- Current month actions - start -->
       <div class="container-titled">
         <h3 class='title-secondary'>פעולות שבוצעו החודש</h3>
-        <div class="card">moc</div>
+        <div class="card container-centered">
+          <div class="container-centered-v">
+            <div class="icon action">+</div>
+            <h2 class='title-primary'>שנתחיל לעבוד?</h2>
+            <h3 class='title-secondary'>פעולות שבוצעו החודש</h3>
+          </div>
+        </div>
       </div>
       <!-- Current month actions - end -->
 
@@ -40,13 +120,20 @@
 
       <!-- Status bar with calendar and User info - start -->
       <div class="status-bar flex-row">
-        <div class="title-calendar"><span>March,</span> 2021</div>
-        <div class="user-info flex-row">
-          <div class="usertext">
+        <div class="container-centered">
+          <img src="./assets/export/Export.png" alt="epxrt" class="left-btn" />
+          <div class="title-calendar">
+            <span>March,</span> 2021
+          </div>
+          <img src="./assets/export/Export.png" alt="epxrt" class="right-btn" />
+
+        </div>
+        <div class="user-info flex">
+          <div class="usertext mx-1-6">
             <h2 class='title-primary-lg'>היי, יגאל כהן</h2>
             <h3 class='title-primary-faded'>?לא התראינו מאז ינואר, שנשלים פערים</h3>
           </div>
-          <div class="avatar">
+          <div class="avatar container-centered-v">
             <div class="avatar-img">img</div>
           </div>
         </div>
@@ -54,15 +141,78 @@
       <!-- Status bar with calendar and User info - end -->
 
       <!-- Statistics panel - start -->
-      <div class="stats cols-2">
+      <div class="stats">
         <div class="rows-2">
-          <div class="card">moc</div>
-          <div class="card">moc</div>
+
+          <div class="card container-centered">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class="flex-row container-centered">
+              <div class='container-centered-v py-0-6 border-r'>
+                <h3 class='title-secondary'>נוספו החודש</h3>
+                <div class="flex">
+                  <img src="./assets/arrow-up/Up 3.png" alt="trend-up" class='mx-0-8' />
+                  <h2 class='title-money-lg trend-up'> 37+ </h2>
+                </div>
+              </div>
+              <div class='container-centered-v py-0-6 pl-0-8'>
+                <h3 class='title-primary'>סך לקוחות</h3>
+                <h3 class='title-money-lg'>1,437</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class='card-container my-0-9'>
+              <h2 class='title-primary'><span class='title-secondary-sm'> (בממוצע)</span>פוליסה ללקוח</h2>
+              <h3 class='title-secondary-xs'>מחושב בהתאם ל־4,987 פוליסות פעילות</h3>
+              <div class="flex">
+                <img src="./assets/arrow-up/Up 3.png" alt="trend-up" class='mx-0-8' />
+                <h2 class='title-money-lg'>4.8</h2>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="cols-3">
-          <div class="card">moc</div>
-          <div class="card">moc</div>
-          <div class="card">moc</div>
+
+          <div class="card flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class='card-container my-1-3'>
+              <h2 class='title-primary'>צבירה</h2>
+              <div class="flex">
+                <img src="./assets/arrow-down/Down 3.png" alt="trend-down" class='mx-0-8' />
+                <h2 class='title-money-lg'><span class='currency'>₪</span>0</h2>
+              </div>
+
+            </div>
+            <div class="graph"></div>
+          </div>
+
+          <div class="card flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class='card-container my-1-3'>
+              <h2 class='title-primary'>עמלות</h2>
+              <div class="flex">
+                <img src="./assets/arrow-down/Down 3.png" alt="trend-down" class='mx-0-8' />
+                <h2 class='title-money-lg'><span class='currency'>₪</span>400</h2>
+              </div>
+            </div>
+            <div class="graph"></div>
+          </div>
+
+          <div class="card flex-col">
+            <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+            <div class='card-container my-1-3'>
+              <h2 class=' title-primary'>פרמיה</h2>
+              <div class="flex">
+                <img src="./assets/arrow-up/Up 3.png" alt="trend-up" class='mx-0-8' />
+                <h2 class='title-money-lg'><span class='currency'>₪</span>1,280</h2>
+              </div>
+            </div>
+            <div class="graph"></div>
+          </div>
+
         </div>
       </div>
       <!-- Statistics panel - end -->
@@ -73,17 +223,108 @@
         <!-- Products with chart panel - start -->
         <div class="container-titled">
           <h3 class='title-secondary'>מוצרים</h3>
-          <div class="card">Products with chart</div>
+
+          <div class="products card flex-col">
+
+            <div class="card-container flex-col flex-strech">
+
+              <div>
+                <ul>
+                  <li class='title-primary'>כמות פוליסות</li>
+                  <li class='title-primary'>עמלות</li>
+                  <li class='title-primary'>פרמיה</li>
+                  <li class='title-primary'>צבירה</li>
+                </ul>
+              </div>
+
+              <div class="graph-columns"></div>
+            </div>
+            <div class="card-container flex-row ">
+              <div class="">
+                <div class="flex-row">
+                  <h4>₪76</h4>
+                  <h4>אלטשולר שחם</h4>
+                </div>
+                <div class="flex-row">
+                  <h4>₪8</h4>
+                  <h4>הראל</h4>
+                </div>
+              </div>
+              <div class="">
+                <div class="flex-row">
+                  <h4>₪76</h4>
+                  <h4>אלטשולר שחם</h4>
+                </div>
+                <div class="flex-row">
+                  <h4>₪8</h4>
+                  <h4>הראל</h4>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
         </div>
         <!-- Products with chart panel - end -->
 
         <!-- Comission panels - start -->
-        <div class="container-titled">
+        <div class="container-titled comission">
           <h3 class='title-secondary'>נתוני עמלות</h3>
           <div class="rows-3">
-            <div class="card">moc</div>
-            <div class="card">moc</div>
-            <div class="card">moc</div>
+
+            <div class="card flex">
+              <div class="card-container flex">
+                <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+                <div class='mr-1-6'>
+                  <h2 class='title-primary'>התפלגות עמלות</h2>
+                  <h3 class='title-secondary p-0'>לפי לקוחות</h3>
+                </div>
+                <div class="pie-graph"></div>
+              </div>
+            </div>
+
+            <div class="card flex">
+              <div class="card-container flex">
+                <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+                <div class='mr-1-6'>
+                  <h2 class='title-primary'>התפלגות לקוחות</h2>
+                  <h3 class='title-secondary p-0'>לפי ממוצע עמלה</h3>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <h3 class='title-money-sm my-0 mx-0-4'>597</h3>
+                      <div class="dot trend-down"></div>
+                    </div>
+                    <div class="flex-row">
+                      <h3 class='title-money-sm my-0 mx-0-4'>876</h3>
+                      <div class="dot trend-up"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pie-graph"></div>
+              </div>
+            </div>
+
+            <div class="card flex">
+              <div class="card-container flex">
+                <img src="./assets/export/Export.png" alt="epxrt" class="export-btn" />
+                <div class="flex-row">
+                  <div class=''>
+                    <h2 class='title-primary mx-1-6'>ממוצע עמלה</h2>
+                    <h3 class='title-secondary p-0 mx-1-6'>של כלל הלקוחות</h3>
+                  </div>
+                  <div>
+                    <div class="flex">
+                      <img src="./assets/arrow-up/Up 3.png" alt="trend-up" class='mx-0-8' />
+                      <h3 class='title-money-lg'>
+                        <span class='currency'>₪</span>1,473
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <!-- Comission panels - end -->
@@ -95,14 +336,78 @@
         <!-- Rating list - start -->
         <div class="container-titled">
           <h3 class='title-secondary'>דירוג חברות ביטוח (בהתאמת הדו״חות למערכת)</h3>
-          <div class="card">Insurance companies ratings list</div>
+          <div class="card ratings">
+            <div class="card-container">
+              <ul>
+
+                <li>
+                  <div class="flex-row">
+                    <div class="flex-row flex-strech mr-1-6">
+                      <h3 class='percents'>87<span>%</span></h3>
+                      <div class=''>
+                        <h2 class='title-primary'>הראל</h2>
+                        <h3 class='title-secondary p-0'>מקום ראשון</h3>
+                      </div>
+                    </div>
+                    <div class="company-logo container-centered-v">+</div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="flex-row">
+                    <div class="flex-row flex-strech mr-1-6">
+                      <h3 class='percents'>82<span>%</span></h3>
+                      <div class=''>
+                        <h2 class='title-primary'>אלטשולר שחם</h2>
+                        <h3 class='title-secondary p-0'>מקום שני</h3>
+                      </div>
+                    </div>
+                    <div class="company-logo container-centered-v">+</div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="flex-row">
+                    <div class="flex-row flex-strech mr-1-6">
+                      <h3 class='percents'>54<span>%</span></h3>
+                      <div class=''>
+                        <h2 class='title-primary'>שלמה סיקסט</h2>
+                        <h3 class='title-secondary p-0'>מקום שלישי</h3>
+                      </div>
+                    </div>
+                    <div class="company-logo container-centered-v">+</div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="flex-row">
+                    <div class="flex-row flex-strech mr-1-6">
+                      <h3 class='percents'>23<span>%</span></h3>
+                      <div class=''>
+                        <h2 class='title-primary'>כלל ביטוח ופיננסים</h2>
+                        <h3 class='title-secondary p-0'>מקום ראשון</h3>
+                      </div>
+                    </div>
+                    <div class="company-logo container-centered-v">+</div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
         </div>
         <!-- Rating list - end -->
 
         <!-- Lost data - start -->
         <div class="container-titled">
           <h3 class='title-secondary'>נתונים אבודים</h3>
-          <div class="card">Lost data</div>
+          <div class="card container-centered">
+            <div class="container-centered-v">
+              <div class="icon action">+</div>
+              <h2 class='title-primary'>!ניהול תיק למופת</h2>
+              <h3 class='title-secondary'>אין נתונים אבודים להצגה</h3>
+            </div>
+          </div>
         </div>
         <!-- Lost data - end -->
 
@@ -113,7 +418,46 @@
     <!-- Main content - end -->
 
     <!-- Sidebar - start -->
-    <div class="sidebar">sidebar</div>
+    <div class="sidebar flex-col">
+
+      <div class='logo container-centered-v'>
+        <div><span>LO</span></div>
+        <div>GO</div>
+      </div>
+
+      <!-- Nav links -->
+      <nav>
+        <ul class='container-centered-v'>
+          <li>
+            <a href="#" class='active'>
+              <div class="icon">1</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">2</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">3</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">4</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Service buttons (download, expand) -->
+      <div class="container-centered-v">
+        <div class='icon download mb-1-3'>+</div>
+        <img src="./assets/export/Export.png" alt="epxrt" class="expand-btn mb-1-6" />
+      </div>
+
+    </div>
     <!-- Sidebar - end -->
 
   </div>

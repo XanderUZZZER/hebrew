@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>91AC93C8-D375-4ACE-B5F0-A4E38D17D2CD@1.5x</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.007843 0 0 0 0 0.713725 0 0 0 0 0.290196 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Dashboard---Dark-Mode" transform="translate(-551.000000, -168.000000)">
+            <g id="Top-Boxs" transform="translate(506.000000, 106.000000)">
+                <g id="TEXT" transform="translate(40.000000, 16.000000)">
+                    <g id="Curved/Border/Arrow/Down-3" transform="translate(0.000000, 37.000000)" filter="url(#filter-1)">
+                        <g transform="translate(5.000000, 9.000000)">
+                            <g id="Arrow---Up-3" transform="translate(0.833333, 0.500000)" stroke="#130F26" stroke-width="1.5">
+                                <line x1="4.25508333" y1="6.91666667" x2="4.25508333" y2="14.375" id="Stroke-1"></line>
+                                <path d="M4.25016667,0.538441667 C3.2035,0.538441667 -0.142341667,5.84175 0.459325,6.44341667 C1.06099167,7.04508333 7.38183333,7.10258333 8.041,6.44341667 C8.70016667,5.78345 5.296,0.538441667 4.25016667,0.538441667 Z" id="Stroke-3"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
